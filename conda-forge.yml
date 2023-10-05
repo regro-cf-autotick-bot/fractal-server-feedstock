@@ -4,3 +4,16 @@ github:
 conda_build:
   error_overlinking: true
 conda_forge_output_validation: true
+
+bot:
+  # can the bot automerge PRs it makes on this feedstock
+  automerge: false
+
+  # The bot.inspection key in the conda-forge.yml can have one of six possible values:
+  # inspection: hint  # generate hints using source code (backwards compatible)
+  # inspection: hint-all  # generate hints using all methods
+  # inspection: hint-source  # generate hints using only source code
+  # inspection: hint-grayskull  # generate hints using only grayskull
+  inspection: update-all  # update recipe using all methods
+  # inspection: update-source  # update recipe using only source code
+  # inspection: update-grayskull  # update recipe using only grayskull
