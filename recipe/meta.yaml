@@ -14,7 +14,7 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - fractalctl = fractal_server.__main__:run
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -22,7 +22,7 @@ requirements:
     - poetry-core
     - pip
   run:
-    - cloudpickle
+    - cloudpickle >=2.2.1,<2.3.0
     - python >=3.9.0,<4.0.0
     - python-dotenv >=0.20.0,<0.21.0
     - fastapi >=0.103.0,<0.104.0
@@ -33,11 +33,10 @@ requirements:
     - uvicorn >=0.20.0,<0.21.0
     - sqlalchemy >=1.4.0,<2.0.0
     - sqlalchemy-utils >=0.38.3,<0.39.0
-    - greenlet *
+    - greenlet
     - pydantic >=1.10.8,<2
   run_constrained:
     - clusterfutures >=0.5.0,<0.6.0
-    - cloudpickle >=2.2.1<2.3.0
     - asyncpg >=0.27.0,<0.28.0
     - psycopg2 >=2.9.5,<3.0.0
     - gunicorn >=20.1.0,<21.0.0
