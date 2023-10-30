@@ -1,5 +1,5 @@
 {% set name = "fractal-server" %}
-{% set version = "1.3.12" %}
+{% set version = "1.3.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fractal_server-{{ version }}.tar.gz
-  sha256: 0f3f823287d375a9082aee5164bd57d2f450d2862543ccb8f3e05083ae2f0408
+  sha256: f1153b901fc946c34d060fcb2864cff3784c20ad5181125b077f41d1e6bf8863
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - fractalctl = fractal_server.__main__:run
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -22,6 +22,7 @@ requirements:
     - poetry-core
     - pip
   run:
+    - cloudpickle
     - python >=3.9.0,<4.0.0
     - python-dotenv >=0.20.0,<0.21.0
     - fastapi >=0.103.0,<0.104.0
