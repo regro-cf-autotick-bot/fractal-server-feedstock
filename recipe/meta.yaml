@@ -1,5 +1,5 @@
 {% set name = "fractal-server" %}
-{% set version = "1.3.13" %}
+{% set version = "1.3.14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fractal_server-{{ version }}.tar.gz
-  sha256: f1153b901fc946c34d060fcb2864cff3784c20ad5181125b077f41d1e6bf8863
+  sha256: 060cf0427b19afe7c41f853510e8e8907d1096fae1c7cba4657c68fbf23e691d
 
 build:
   noarch: python
@@ -25,7 +25,7 @@ requirements:
     - python >=3.9.0,<4.0.0
     - python-dotenv >=0.20.0,<0.21.0
     - fastapi >=0.103.0,<0.104.0
-    - sqlmodel >=0.0.8,<0.0.9
+    - sqlmodel >=0.0.11,<0.0.12
     - aiosqlite >=0.17.0,<0.18.0
     - fastapi-users >=12.1.0,<13.0.0
     - alembic >=1.9.1,<2.0.0
