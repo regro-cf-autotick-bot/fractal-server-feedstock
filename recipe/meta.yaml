@@ -1,5 +1,5 @@
 {% set name = "fractal-server" %}
-{% set version = "1.4.1" %}
+{% set version = "1.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fractal_server-{{ version }}.tar.gz
-  sha256: 8552df0c2bc962b8b9f173eeb110571639fff986c25ba22c2fca24deb3d40577
+  sha256: 1e27acea8fbb051c324fbe8df65b964fa55012c4722bb1257fb103346cf90fee
 
 build:
   noarch: python
@@ -22,11 +22,12 @@ requirements:
     - poetry-core
     - pip
   run:
+    - cloudpickle
     - bcrypt 4.0.1
     - python >=3.9.0,<4.0.0
     - python-dotenv >=0.20.0,<0.21.0
     - fastapi >=0.103.0,<0.104.0
-    - sqlmodel >=0.0.12,<0.0.13
+    - sqlmodel >=0.0.14,<0.0.15
     - aiosqlite >=0.17.0,<0.18.0
     - fastapi-users >=12.1.0,<13.0.0
     - alembic >=1.9.1,<2.0.0
