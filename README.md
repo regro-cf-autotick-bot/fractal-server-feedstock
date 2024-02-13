@@ -146,4 +146,5 @@ Feedstock Maintainers
 * [@jluethi](https://github.com/jluethi/)
 * [@mfranzon](https://github.com/mfranzon/)
 * [@tcompa](https://github.com/tcompa/)
+* [@ychiucco](https://github.com/ychiucco/)
 
