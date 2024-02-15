@@ -22,7 +22,6 @@ requirements:
     - poetry-core
     - pip
   run:
-    - cloudpickle
     - packaging >=23.2.0,<24.0.0
     - bcrypt 4.0.1
     - python >=3.9.0,<4.0.0
