@@ -1,6 +1,6 @@
 {% set python_min = "3.12.0" %}
 {% set name = "fractal-server" %}
-{% set version = "2.22.14" %}
+{% set version = "2.23.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fractal_server-{{ version }}.tar.gz
-  sha256: c04af7f1913c45daadcba6c5574226bc8fb44317d6f25ed043bce573b72f4add
+  sha256: 3446f6662f5e6bdd7d9ee3aca628dab4d232332c3e36d73f9adca0d734a9e09c
 
 build:
   entry_points:
@@ -27,7 +27,7 @@ requirements:
     - httpx-oauth
     - invoke
     - paramiko >=5.0.0,<5.1.0
-    - starlette
+    - starlette >=1.0.1
     - tomli-w >=1.2.0,<1.3.0
     - python >={{ python_min }},<3.15
     - fastapi >=0.136.0,<0.137.0
